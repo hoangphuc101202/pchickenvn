@@ -1,0 +1,276 @@
+/* File CSS chính */
+.app{
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--mauChuDao);
+    color: #fff;
+}
+.logo{
+    position: relative;
+    top: 2px;
+    left: 15px;
+}
+.logo-img{
+    width: 75px;
+    border-radius: 50% ;
+}
+
+.header-menu, .login-menu{
+    display: flex;
+    align-items: center;
+    /* font-family: 'Roboto', sans-serif; */
+}
+.header-menu{
+    display: flex;
+    align-items: flex-end;
+}
+.header-menu-item{
+    font-weight: 700;
+    font-size: 0.8rem ;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: .3s;
+    border-top-right-radius:5px ;
+    border-top-left-radius: 5px;
+    cursor: pointer;
+
+}
+
+.login-menu{
+    display: flex;
+    position: relative;
+    right: 20px;
+    font-size: 0.9rem;
+}
+.login-menu-show{
+    display: none;
+}
+.modal-login-menu{
+    display: flex;
+    align-items: center;
+}
+.login-btn, .register-btn{
+    cursor: pointer;
+}
+.cart{
+    font-size: 1.2rem;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.userName-cart{
+    display: none;
+}
+.userName-cart-show{
+    display: flex;
+}
+.userName-settingUser{
+    height: 10px;
+}
+.userName{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -10px;
+    right: 10px;
+    
+}
+.show-userName, .icon{
+    cursor: pointer;
+}
+.show-userName:hover{
+    color: rgba(255, 255, 255, .9);
+}
+.show-userName:active, .icon-cart:active{
+    color: rgba(255, 255, 255, .8);
+}
+.setting-user{
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 50px;
+    z-index: 5;
+}
+.show-setting-user{
+    display: flex;
+}
+.setting-user-items{
+    background-color: var(--mauChu);
+    border: 1px solid var(--mauChu);
+    cursor: pointer;
+    padding: 0px 3px;
+    color: rgb(241, 239, 239);
+}
+.setting-user-items:hover{
+    background-color: #ab7a55;
+    border: 1px solid #fff;
+    color: rgb(255, 255, 255);
+}
+.setting-user-items:active{
+    background-color: #ae896d;
+    color: rgb(255, 255, 255);
+}
+.button-quyenAdmin{
+    display: none;
+}
+.show-button-quyenAdmin{
+    display: flex;
+}
+
+.top-menu-wrap{
+    display: flex;
+    justify-content: center;
+    background-color: var(--mauChuDao);
+}
+.top-menu{
+    display: flex;
+    list-style: none;
+    color: white;
+    /* font-family: 'Roboto', sans-serif; */
+    font-weight: 700;
+}
+.top-menu-item{
+    font-size: 0.8rem;
+    padding: 15px;
+    cursor: pointer;
+}
+.top-menu-item:hover,
+.header-menu-item:hover{
+    background-color:var(--mauHover);
+    color: var(--mauChu2);
+}
+
+.product-item-img img{
+    width: 150px;
+    height: 150px;
+}
+/* Modal CSS */
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+ }
+
+/* Modal login  */
+.hide{
+    display: flex;
+}
+.login-modal{
+    background-color: rgba(19, 17, 17,.8);
+    width: 400px;
+    height: 200px;
+    margin: 300px auto;
+    border-radius: 10px;
+    position: relative;
+}
+/* thiết lập style cho thẻ a */
+.pagination-wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding:  12px 18px;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+ /* thiết lập style cho class active */
+  .pagination a.active {
+    background-color: var(--mauChuDao);
+    color: white;
+    /*Thiết kế hình tròn với CSS*/
+    border-radius: 50%;
+  }
+ /* thêm màu nền khi người dùng hover vào class không active */
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    /*Thiết kế hình tròn với CSS*/
+    border-radius: 50%;
+  }
+
+
+
+.label-info-products{
+    font-size: 30px;
+}
+.input-info-products{
+    font-size: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.heading{
+    font-size: 1.3rem;
+    color: rgb(243, 245, 248);
+    text-align: center;
+    margin-top: 24px;
+}
+.login-icon{
+    min-width: 25px;
+}
+.form-group{
+    border-bottom: 1px solid #fff;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.form-input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #f5f5f5;
+    flex-grow: 1;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.close-icon {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+.form-group i{
+    color: #f5f5f5;
+    font-size: 12px;
+}
+.form-submit{
+    background: transparent;
+    width: 100%;
+    color: #fff;
+    margin-top: 10px;
+    padding: 6px;
+    font-size: 1.2rem;
+    border-radius:5px ;
+    cursor: pointer;
+}
+.form-submit:hover{
+    border: 1px solid #fff;   
+    /* border: 1px solid var(--mauChuDao);    */
+}
+.form-submit:active{
+    background-color: rgba(0, 0, 0, .2);
+}
+.eye{
+    content: "f070";
+}
+#show-btn{
+    position: relative;
+    right: 1%;
+}
+.modal, .modal-signUp, .modal-admin, .modal-cart, .product-details-modal{
+    z-index: 3;
+}

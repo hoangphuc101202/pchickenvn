@@ -1,0 +1,37 @@
+.admin-create-user-parent{
+    display: flex;
+    justify-content: center;
+}
+.admin-create-user{
+    width: 50%;
+}
+.admin-input-create-parent{
+    margin: 5px;
+    display: flex;
+}
+.admin-label-create{
+    min-width: 170px;
+    font-size: 20px;
+}
+.admin-input-create{
+    display: flex;
+    border: 1px solid black;
+    font-size: 20px;
+    flex: 1;
+}
+.admin-button-create-parent{
+    display: flex;
+    justify-content: center;
+}
+.admin-button-create{
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: var(--mauChuDao);
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.admin-button-create:active{
+    background-color: var(--mauChuDaoActive);
+}

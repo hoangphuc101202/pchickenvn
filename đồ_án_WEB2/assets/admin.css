@@ -1,0 +1,124 @@
+
+.modal-admin{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 4000px;
+    left: 0;
+    background-color: rgb(222, 222, 222);
+    display: none;
+    z-index: 6;
+}
+.modal-admin-show{
+    display: flex;
+}
+.modal-admin-menu-wrap{
+
+}
+.modal-admin-icon-return{
+
+}
+.icon-return{
+    font-size: 30px;
+    font-weight: bold;
+    background-color: var(--mauChu2);
+    height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.icon-return:hover{
+    background-color: var(--mauChu);
+}
+.icon-return:active{
+    background-color: var(--mauChu2);
+}
+.modal-admin-menu{
+}
+.parent-modal-admin-menu-item{
+
+}
+.modal-admin-menu-item{
+    min-width: 220px;
+    font-size: 20px;
+    height: 50px;
+    background-color: var(--mauChuDao);
+    display: flex;
+    align-items: center;
+    padding: 35px 20px;
+    cursor: pointer;
+}
+.modal-admin-menu-item:hover{
+    background-color: #647b24;
+    color: #fff;
+}
+.modal-admin-menu-item:active{
+    background-color: #799331;
+    color: black;
+}
+.parent-showListUser{
+    display: none;
+    flex-direction: column;
+}
+.show-parent-showListUser{
+    display: flex;
+}
+#showListUser, .show-list-products{
+    width: 1130px;
+}
+.show-info-capital, .show-info-products-capital{
+    border: 3px solid var(--mauChuDao);
+    height: 30px;
+}
+.show-info, .show-info-products{
+    border: 3px solid var(--mauChuDao);
+    min-height: 50px;
+    flex-wrap: wrap;
+}
+
+
+
+
+.list-products-wrap{
+    display: none;
+}
+.show{
+    display: flex;
+}
+.form-create-products-wrap{
+    display: flex;
+    justify-content: center;
+}
+.form-create-products{
+    width: 50%;
+}
+.products-input-parent{
+    display: flex;
+    margin: 5px;
+    font-size: 20px;
+}
+.products-label{
+    display: flex;
+    min-width: 90px;
+}
+.products-input{
+    display: flex;
+    border: 1px solid black;
+    flex: 1;
+    font-size: 20px;
+}
+.form-create-products-button-parent{
+    display: flex;
+    justify-content: center;
+}
+.form-create-products-button{
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: var(--mauChuDao);
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.form-create-products-button:active{
+    background-color: var(--mauChuDaoActive);
+}

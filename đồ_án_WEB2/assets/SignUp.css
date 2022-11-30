@@ -1,0 +1,64 @@
+.modal-signUp{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.show-signUp{
+    display: flex;
+}
+.modal-signUp-form{
+    background-color: rgba(19, 17, 17, .8);
+    position: relative;
+    border-radius: 10px;
+}
+.modal-signUp-form-info{    
+    display: flex;
+    flex-direction: column;
+}
+.close-icon-signUp{
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+.dangKy{
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+.input-signUp{
+    background-color: transparent;
+    width: 500px;
+    height: 30px;
+    margin: 10px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    font-size: 1rem;
+    outline: 0;
+}
+.button-dangKy{
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.button-dangKy:hover{
+    border: 1px solid #fff;
+}
+.button-dangKy:active{
+    background-color: rgba(0, 0, 0, .2);
+}

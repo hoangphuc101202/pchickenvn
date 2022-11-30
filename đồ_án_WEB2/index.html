@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P's Chiken</title>
+    <!-- <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin> -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css">
+    <link rel="stylesheet" href="./assets/config.css">
+    <link rel="stylesheet" href="./assets/product-card.css">
+    <link rel="stylesheet" href="./assets/slider.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/SignUp.css">
+    <link rel="stylesheet" href="./assets/admin.css">
+    <link rel="stylesheet" href="./assets/formCreateUser.css">
+    <link rel="stylesheet" href="./assets/footer.css">
+    <link rel="stylesheet" href="./assets/product-details.css">
+
+    <script src="./pushdata.js" defer></script>
+    <script src="./JavaScript.js" defer></script>
+    <script src="./Admin.js" defer></script>
+    <script src="./cart-product.js" defer></script>
+    <script src="./productDetails.js" defer></script>
+
+
+
+</head>
+<script src="./slider.js" defer >
+</script>
+<body>
+    <div class="app">
+        <div class="header">
+                <div class="logo">
+                    <img class="logo-img" src="./assets/image/P'CHICKEN.png" alt="">
+                </div>
+                <div class="header-menu">
+                    <div class="header-menu-item">Trang chủ</div>
+                    <div class="header-menu-item">Về chúng tôi</div>
+                    <div class="header-menu-item" onclick="scrollMenu()">Thực đơn</div>
+                    <div class="header-menu-item">Khuyến mãi</div>
+                    <div class="header-menu-item">Dịch vụ</div>
+                    <div class="header-menu-item">Tin tức</div>
+                    <div class="header-menu-item">Liên hệ</div>
+                    <div class="header-menu-item">Tuyển dụng</div>
+                </div>
+                <div class="modal-login-menu">
+                    <div class="login-menu">
+                        <div class="login-btn">Đăng nhập</div>
+                        <span> / </span>
+                        <div class="register-btn">Đăng ký</div>
+                    </div>
+                    <div class="userName-cart">
+                        <div class="userName-settingUser">
+                            <div class="userName">
+                                <i class="fa-solid fa-user login-icon"></i>
+                                <div class="show-userName"></div>
+                            </div>
+                            <div class="setting-user">
+                                <div>
+                                    <div class="setting-user-items button-quyenAdmin" id="button-quyenAdmin">Quyền Admin</div>
+                                    <div class="setting-user-items" id="button-dangXuat">Đăng xuất</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="parent-icon-cart">
+                        <i class="fa-solid fa-cart-shopping icon-cart "></i>
+                    </div>
+                </div>
+        </div>
+        <div class="slider">
+            <div class="slide">
+                <img src="./assets/image/slideShow/slide1.png" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/image/slideShow/slide2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/image/slideShow/slide3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/image/slideShow/slide4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/image/slideShow/slide5.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="./assets/image/slideShow/slide6.jpg" alt="">
+            </div>
+            <a class="prev" id="prev">&#10094;</a>
+            <a class="next" id="next">&#10095;</a>
+            <div class="slidecontrol">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+            <div class="body">
+                <div class="top-menu-wrap">
+                    <ul class="top-menu">
+                    <li class="top-menu-item">COMBO</li>
+                    <li class="top-menu-item">GÀ GIÒN VUI VẺ</li>
+                    <li class="top-menu-item">GÀ SỐT CAY</li>
+                    <li class="top-menu-item">MỲ Ý SỐT BÒ BẰM</li>
+                    <li class="top-menu-item">BURGER & CƠM</li>
+                    <li class="top-menu-item">PHẦN ĂN PHỤ</li>
+                    <li class="top-menu-item">MÓN TRÁNG MIỆNG</li>
+                    </ul>
+                </div>
+                <div class="products-wrap">
+                    <div id="products-list" class="products">
+                        
+                    </div>
+                       
+                        
+
+                </div>
+                <div class="pagination-wrap">
+                    <div class="pagination">
+                        <a href="" stt="0" class="page active">1</a>
+                        <a href="" stt="1" class="page">2</a>
+                        <a href="" stt="2" class="page">3</a>
+                        <a href="" stt="3" class="page">4</a>
+                      </div>             
+                </div>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="login-modal">
+                <form class="form-login">
+                    <i  class="fas fa-window-close close-icon" ></i>
+                    <h1 class="heading">ĐĂNG NHẬP</h1>
+                    <div class="form-group">                    
+                        <i class="fa-solid fa-user login-icon"></i>
+                        <input id="login-account" type="text" class="form-input" placeholder="Tên đăng nhập">
+                    </div>
+                    <div class="form-group">
+                        <i class="fa-solid fa-key login-icon"></i>
+                        <input id="login-password" type="password" class="form-input pass" placeholder="Mật khẩu">
+                        <span id="show-btn">
+                        <i class="fa-solid fa-eye" class="eye"></i>
+                        </span>
+                    </div>
+                    <input id="button-dangNhap" type="button" class="form-submit" value="Đăng nhập">
+                </form>
+            </div>
+        </div>
+        <div class="modal-signUp">
+            <div class="modal-signUp-form">
+                <form action="modal-signUp-form-info">
+                    <i class="fas fa-window-close close-icon-signUp"></i>
+                    <h1 class="dangKy">Đăng kí</h1>
+                    <div>
+                        <input id="dangKy-tenHienThi" class="input-signUp" type="text" placeholder="Tên hiển thị">
+                    </div>
+                    <div>
+                        <input id="dangKy-taiKhoan" class="input-signUp" type="text" placeholder="Tài khoản">
+                    </div>
+                    <div>
+                        <input id="dangKy-matKhau" class="input-signUp" type="password" placeholder="Mật khẩu">
+                    </div>
+                    <div>
+                        <input id="dangKy-nhapLaiMatKhau" class="input-signUp" type="password" placeholder="Nhập lại mật khẩu">
+                    </div>
+                    <div>
+                        <input id="dangKy-soDienThoai" class="input-signUp" type="text" placeholder="Số điện thoại">
+                    </div>
+                    <div>
+                        <input id="dangKy-diaChi" class="input-signUp" type="text" placeholder="Địa chỉ">
+                    </div>
+                    <input id="button-dangKy" type="button" class="button-dangKy" value="Đăng ký">
+                </form>
+            </div>
+        </div>
+        <div class="modal-admin">
+            <div class="modal-admin-menu-wrap">
+                <div>
+                    <img src="./assets/image/logo_admin.webp" alt="">
+                </div>
+                <div class="modal-admin-icon-return icon-return">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Quay lại
+                </div>
+                <div class="modal-admin-menu">
+                    <div class="parent-modal-admin-menu-item">
+                        <div class="modal-admin-menu-item" id="button-quanLyKhachHang">Quản lý khách hàng </div>
+                        <div class="modal-admin-menu-item" id="button-quanLySanPham">Quản lý sản Phẩm</div>
+                        <div class="modal-admin-menu-item">Quản lý đơn hàng</div>
+                    </div>
+                </div>
+            </div>
+            <div class="parent-showListUser show-parent-showListUser">
+                <div class="admin-create-user-parent">
+                    <form class="admin-create-user">
+                        <input type="hidden" id="index">
+                        <div class="admin-input-create-parent">
+                            <label class="admin-label-create" for="">Tên hiển thị:</label>
+                            <input id="admin-create-tenHienThi" class="admin-input-create" type="text">
+                        </div>
+                        <div class="admin-input-create-parent">
+                            <label class="admin-label-create" for="">Tài khoản:</label>
+                            <input id="admin-create-taiKhoan" class="admin-input-create" type="text">
+                        </div>
+                        <div class="admin-input-create-parent">
+                            <label class="admin-label-create" for="">Mật khẩu:</label>
+                            <input id="admin-create-matKhau" class="admin-input-create" type="text">
+                        </div>
+                        <div class="admin-input-create-parent">
+                            <label class="admin-label-create" for="">Nhập lại mật khẩu:</label>
+                            <input id="admin-create-nhapLaiMatKhau" class="admin-input-create" type="text">
+                        </div>
+                        <div class="admin-input-create-parent">
+                            <label class="admin-label-create" for="">Số điện thoại:</label>
+                            <input id="admin-create-soDienThoai" class="admin-input-create" type="text">
+                        </div>
+                        <div class="admin-input-create-parent">
+                            <label class="admin-label-create" for="">Địa chỉ:</label>
+                            <input id="admin-create-diaChi" class="admin-input-create" type="text">
+                        </div>
+                        <div class="admin-button-create-parent">
+                            <input id="admin-button-create-themUser" type="button" class="admin-button-create" value="Thêm tài khoản">
+                            <input id="admin-button-create-chinhUser" type="button" class="admin-button-create" style="display: none;" value="Chỉnh sửa tài khoản" onclick="changeUser()">
+                        </div>
+                    </form>
+                </div>
+                <table id="showListUser"></table>
+            </div>
+            <div class="list-products-wrap">
+                <div>
+                    <div class="form-create-products-wrap">
+                        <form class="form-create-products">
+                            <input type="hidden" id="indexProduct">
+
+                            <div class="products-input-parent">
+                                <label class="products-label" for="">Hình:</label>
+                                <input class="products-input" id="hinhSanPham" type="text">
+                            </div>
+                            <div class="products-input-parent">
+                                <label class="products-label" for="">Tên:</label>
+                                <input class="products-input" id="tenSanPham" type="text">
+                            </div>
+                            <div class="products-input-parent">
+                                <label class="products-label" for="">Giá:</label>
+                                <input class="products-input" id="giaSanPham" type="text">
+                            </div>
+                            <div class="products-input-parent">
+                                <label class="products-label" for="">Mô tả:</label>
+                                <input class="products-input" id="moTaSanPham" type="text">
+                            </div>
+                            <div class="products-input-parent">
+                                <label class="products-label" for="">Số lượng:</label>
+                                <input class="products-input" id="soLuongSanPham" type="text">
+                            </div>
+                            <div class="form-create-products-button-parent">
+                                <input class="form-create-products-button" id="button-themSanPham" type="button" value="Thêm sản phẩm">
+                                <input class="form-create-products-button" id="button-chinhSuaSanPham" type="button" value="Chỉnh sửa sản phẩm" style="display: none" onclick="changeProducts()">
+                            </div>
+                        </form>
+                    </div>
+                    <table class="show-list-products"></table>
+                </div>
+            </div>
+        </div>
+        <div class="modal-cart">
+            <div class="modal-cart-form">
+                <form action="modal-cart-form-info">
+                    <section class="cart">
+                        <div >
+                            <i class="close-cart fa-regular fa-circle-xmark " ></i>
+                            
+                        </div>
+                        <h2 class="gio-hang">GIỎ HÀNG</h2>
+                        <form action="">
+                            <table>
+                                <thead>
+                                    <tr class="header-cart">
+                                        <th >Sản Phẩm</th>
+                                        <th>Giá</th>
+                                        <th>SL</th>
+                                        <th>Chọn</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="body-cart">
+                                    <!-- <tr>
+                                        <td style="display:flex; align-items:center"><img style=" width: 100px; height: 100px;" src="./assets/image/garan1.png" alt="">Combo gà rán</td>
+                                        <td><p><span>169.000</span></p></td>
+                                        <td><input type="number" value="1" min="1" style="border: 1px solid black; width: 30px;outline: none;"></td>
+                                        <td style="cursor:pointer">Xóa</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="display:flex; align-items:center"><img style=" width: 100px; height: 100px;" src="./assets/image/garan21.png" alt="">Combo gà rán</td>
+                                        <td><p><span>16.000</span><sup>đ</sup></p></td>
+                                        <td><input type="number" value="1" min="1" style="border: 1px solid black; width: 30px;outline: none;"></td>
+                                        <td style="cursor:pointer">Xóa</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                            <div class="price-total">
+                                <p style="font-weight: bold ;">Tổng tiền:<span class="total-order">0</span><sup>đ</sup></p>
+                            </div>
+                        </form>
+                    </section>
+            </div>
+        </div>
+        <!-- Chi tiet san pham -->
+        <div class="product-details-modal">
+            <!-- <div class="product-details">
+                <img class="product-details-image" src="./assets/image/garan1.png" alt="">
+                <ul class="product-details-info">
+                        <li><h1>Combo Gà Rán</h1></li>
+                        <li><h2>199000</h2></li>
+                        <li>2 miếng gà rán sốt cay / 2 miếng gà không xương/ 1 Hamberger bò / 2 Coca size M</li>
+                </ul>
+            </div> -->
+        </div> 
+        <div id="lienhe" class="footer">
+            <div class="footer-img">
+                <img class="logo-img-footer" src="./assets/image/P'CHICKEN.png" alt="">
+    
+            </div>
+                <ul class="footer-content">
+                    
+                    <li>Công Ty TNHH P's Chicken Việt Nam</li>
+                    <li>Số Điện Thoại 1900 - 33XX</li>
+                    <li>Chăm Sóc Khách Hàng</li>
+                    <li>Email: pchickenvn@gmail.com</li>
+                </ul>
+                <ul class="footer-content">
+                    <li><a href="#">Thông Tin Tuyển Dụng</a></li>
+                    <li><a href="#">Chăm Sóc Khách Hàng</a></li>
+                    <li><a href="#">Hướng Dẫn Đặt Phần Ăn</a></li>
+                    <li><a href="#">Chính Sách Bảo Mật Thông Tin</a></li>
+                    
+                </ul>
+                <ul class="footer-content">
+                    <li>Hãy Kết Nối với Chúng Tôi</li>
+                    <li><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i> <i class="fa-brands fa-google"></i></li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+    <script>
+        window.onload = function(){
+            hienDanhSachSanPham()
+            showListUser()  
+            xulyHienThiChiTietSP()
+        }
+    </script>
+</body>
+
+
+</html>

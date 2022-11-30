@@ -1,0 +1,33 @@
+.footer{
+    margin-top: 2px;
+    background-color: var(--mauChuDao);
+    display: flex;
+    justify-content: space-around;
+    
+}
+.footer-content,
+.footer-content a   {
+    color: white;
+    text-decoration: none;
+    
+    list-style: none;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+}
+.footer-content li{
+    margin: 10px;
+    
+}
+.footer-img{
+    display: flex;
+    /* justify-content: space-around; */
+}
+.logo-img-footer{
+    width: 100px;
+    border-radius: 50%;
+    margin: auto;
+    bottom: auto;
+    
+    
+}

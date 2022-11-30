@@ -1,0 +1,38 @@
+/* File CSS các thuộc tính chung */
+/* Bảng màu  */
+:root{
+    /* Màu nền */
+    --mauChuDao: #84a038;
+    --mauChuDaoActive: #7c943a;
+    --mauHover : #dde5b6;
+    /* Màu Chữ */
+    --mauChu: #a98467;
+    --mauChu2:#a85b20;
+    --mauChuMoTa: rgb(72, 67, 67);
+}
+/* Reset CSS */
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* CSS cho 1 nút bất kỳ */
+.btn{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+    background-color:var(--mauChuDao);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+ }
+ .btn:hover{
+     box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+ }
+
+ 
